@@ -7,8 +7,8 @@ const Item = ({ item }) => {
   const { id, name, img, description, price, quantity } = item;
   const navigate = useNavigate();
 
-  const navigateToServiceDetail = (id) => {
-    navigate("/checkout");
+  const navigateToManageInventory = (id) => {
+    navigate(`/item/${id}`);
   };
   return (
     <div className="g-1 col-sm-12 col-md-6 col-lg-4">
@@ -21,10 +21,10 @@ const Item = ({ item }) => {
           <p className="card-text">{description}</p>
           <a
             href="#"
-            onClick={() => navigateToServiceDetail(id)}
+            onClick={() => navigateToManageInventory(id)}
             className="btn btn-warning"
           >
-            Update: {name}
+            Manage Inventory
           </a>
         </div>
       </div>
