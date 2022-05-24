@@ -5,7 +5,7 @@ import auth from "../../../firebase.init";
 import { useNavigate } from "react-router-dom";
 import Loading from "../../Shared/Loading/Loading";
 
-const SocialLogin = () => {
+const Social = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   const navigate = useNavigate();
 
@@ -59,4 +59,4 @@ const SocialLogin = () => {
   );
 };
 
-export default SocialLogin;
+export default Social;

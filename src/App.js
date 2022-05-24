@@ -7,6 +7,9 @@ import ManageInventory from "./Pages/ManageInventory/ManageInventory";
 import RequireAuth from "./Pages/Login/Required Auth/RequiredAuth";
 import NotFound from "./Pages/Shared/Not Found/NotFound";
 import AboutUs from "./Pages/About Us/AboutUs";
+import Login from "./Pages/Login/Login/Login";
+import Register from "./Pages/Login/Register/Register";
+import Blogs from "./Pages/Blog/Blog";
 
 function App() {
   return (
@@ -24,10 +27,10 @@ function App() {
           }
         ></Route>
         <Route path="/aboutus" element={<AboutUs></AboutUs>}></Route>
-        {/* <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
-        <Route
+        {/* <Route
           path="/checkout"
           element={
             <RequireAuth>
