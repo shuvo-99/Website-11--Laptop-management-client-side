@@ -13,19 +13,20 @@ const Items = () => {
   }, []);
 
   return (
-    // <div id="items" className="container">
-    //   <div className="row">
-    //     <h1>Items</h1>
-    //     {items.map((item) => (
-    //       <Item key={item.id} item={item}></Item>
-    //     ))}
-    //   </div>
-    // </div>
-    <div className="items-container">
-      {items.map((item) => (
-        <Item key={item.id} item={item}></Item>
-      ))}
+    <div id="items" className="container">
+      <div className="row">
+        <h1>Items</h1>
+        {items.map((item) => (
+          <Item key={item.id} item={item}></Item>
+        ))}
+      </div>
     </div>
+
+    // <div className="items-container">
+    //   {items.map((item) => (
+    //     <Item key={item.id} item={item}></Item>
+    //   ))}
+    // </div>
   );
 };
 
