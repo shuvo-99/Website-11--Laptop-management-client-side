@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./Item.css";
 
 const Item = ({ item }) => {
-  const { id, name, img, description, price } = item;
+  const { id, name, img, description, price, quantity } = item;
   const navigate = useNavigate();
 
   const navigateToServiceDetail = (id) => {
@@ -17,6 +17,7 @@ const Item = ({ item }) => {
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
           <p>Price: Tk {price}</p>
+          <p>Quantity: {quantity}</p>
           <p className="card-text">{description}</p>
           <a
             href="#"
