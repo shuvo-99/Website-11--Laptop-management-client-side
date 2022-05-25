@@ -33,7 +33,7 @@ const Header = () => {
           <Nav>
             {user ? (
               <button
-                className="btn btn-link text-black text-decoration-none"
+                className="btn btn-warning btn-link text-black text-decoration-none "
                 onClick={handleSignOut}
               >
                 Sign Out

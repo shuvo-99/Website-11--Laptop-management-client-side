@@ -2,26 +2,79 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const Additem = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    const url = `http://localhost:5000/item`;
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+      });
+  };
+
   return (
-    <div>
-      <h2>Thanks for making appointment. </h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        {/* register your input into the hook by invoking the "register" function */}
-        <input defaultValue="test" {...register("example")} />
+    <div className="w-50 mx-auto">
+      <h2>Please add a new item</h2>
+      <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
+        {/* Name */}
 
-        {/* include validation with required or other standard HTML validation rules */}
-        <input {...register("exampleRequired", { required: true })} />
-        {/* errors will return when field validation fails  */}
-        {errors.exampleRequired && <span>This field is required</span>}
+        <input
+          className="mb-2"
+          placeholder="Name"
+          {...register("name", { required: true, maxLength: 100 })}
+        />
 
-        <input type="submit" />
+        {/* Price */}
+
+        <input
+          className="mb-2"
+          placeholder="Price"
+          type="number"
+          {...register("price")}
+        />
+
+        {/* Quantity */}
+
+        <input
+          className="mb-2"
+          placeholder="Quantity"
+          type="number"
+          {...register("quantity")}
+        />
+
+        {/* SupplierName */}
+
+        <input
+          className="mb-2"
+          placeholder="SupplierName"
+          {...register("suppliername", { required: true, maxLength: 50 })}
+        />
+
+        {/* Description */}
+
+        <textarea
+          className="mb-2"
+          placeholder="Description"
+          {...register("description")}
+        />
+
+        {/* image */}
+
+        <input
+          className="mb-2"
+          placeholder="Photo URL"
+          type="text"
+          {...register("img")}
+        />
+        <input type="submit" value="Add New Item" />
       </form>
     </div>
   );
