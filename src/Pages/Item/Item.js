@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./Item.css";
 
 const Item = ({ item }) => {
-  const { id, name, img, description, price, quantity } = item;
+  const { _id, name, img, description, price, quantity } = item;
   const navigate = useNavigate();
 
   const navigateToManageInventory = (id) => {
@@ -21,7 +21,7 @@ const Item = ({ item }) => {
           <p className="card-text">{description}</p>
           <a
             href="#"
-            onClick={() => navigateToManageInventory(id)}
+            onClick={() => navigateToManageInventory(_id)}
             className="btn btn-warning"
           >
             Manage Inventory
