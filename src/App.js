@@ -12,6 +12,7 @@ import Register from "./Pages/Login/Register/Register";
 import Blogs from "./Pages/Blog/Blog";
 import Additem from "./Pages/Add item/Additem";
 import Myitem from "./Pages/My items/Myitems";
+import Manageitem from "./Pages/Manage Item/ManageItem";
 
 function App() {
   return (
@@ -50,6 +51,17 @@ function App() {
           element={
             <RequireAuth>
               <Myitem></Myitem>
+            </RequireAuth>
+          }
+        ></Route>
+
+        {/* Manage Items */}
+
+        <Route
+          path="/manageitem"
+          element={
+            <RequireAuth>
+              <Manageitem></Manageitem>
             </RequireAuth>
           }
         ></Route>

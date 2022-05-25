@@ -25,7 +25,7 @@ const Item = ({ item }) => {
             onClick={() => navigateToManageInventory(_id)}
             className="btn btn-warning"
           >
-            Manage Inventory
+            Update
           </a>
         </div>
       </div>

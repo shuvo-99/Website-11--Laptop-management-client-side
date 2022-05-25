@@ -9,7 +9,7 @@ const Items = () => {
   useEffect(() => {
     fetch("http://localhost:5000/item")
       .then((res) => res.json())
-      .then((data) => setItems(data));
+      .then((data) => setItems(data.slice(0, 6)));
   }, []);
 
   return (
