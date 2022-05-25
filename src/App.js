@@ -10,6 +10,7 @@ import AboutUs from "./Pages/About Us/AboutUs";
 import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
 import Blogs from "./Pages/Blog/Blog";
+import Additem from "./Pages/Add item/Additem";
 
 function App() {
   return (
@@ -23,6 +24,14 @@ function App() {
           element={
             <RequireAuth>
               <ManageInventory></ManageInventory>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/additem"
+          element={
+            <RequireAuth>
+              <Additem></Additem>
             </RequireAuth>
           }
         ></Route>
