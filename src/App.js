@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/Home/Home";
 import Header from "./Pages/Shared/Header/Header";
 import Footer from "./Pages/Shared/Footer/Footer";
-// import ManageInventory from "./Pages/ManageInventory/ManageInventory";
 import RequireAuth from "./Pages/Login/Required Auth/RequiredAuth";
 import NotFound from "./Pages/Shared/Not Found/NotFound";
 import AboutUs from "./Pages/About Us/AboutUs";

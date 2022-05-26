@@ -60,17 +60,6 @@ const Formyitem = ({ item }) => {
         </div>
       </div>
     </div>
-
-    // <div className="item">
-    //   <img className="w-100" src={img} alt="" />
-    //   <h2>{name}</h2>
-    //   <p>Price: {price}</p>
-    //   <p>
-    //     <small>{description}</small>
-    //   </p>
-    //   <Button className="btn btn-warning">Make Appointment: {name}</Button>
-    //   {/* <button onClick={() => navigateToServiceDetail(id)} className='btn btn-primary'>Book: {name}</button> */}
-    // </div>
   );
 };
 
