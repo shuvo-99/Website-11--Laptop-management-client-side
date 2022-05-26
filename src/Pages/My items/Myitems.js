@@ -12,6 +12,22 @@ const Myitem = () => {
       .then((data) => setItems(data));
   }, []);
 
+  const handleDelete = (id) => {
+    const proceed = window.confirm("Are you sure you want to DELETE it?");
+    if (proceed) {
+      const url = `http://localhost:5000/item/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          const remaining = items.filter((item) => item._id !== id);
+          setItems(remaining);
+        });
+    }
+  };
+
   return (
     <div className="container">
       <div className="row">
