@@ -7,7 +7,7 @@ const Item = ({ item }) => {
   const { _id, name, img, description, price, quantity, suppliername } = item;
   const navigate = useNavigate();
 
-  const navigateToManageInventory = (id) => {
+  const navigateToInventory = (id) => {
     navigate(`/item/${id}`);
   };
   return (
@@ -22,7 +22,7 @@ const Item = ({ item }) => {
           <p className="card-text">{description}</p>
           <a
             href="#"
-            onClick={() => navigateToManageInventory(_id)}
+            onClick={() => navigateToInventory(_id)}
             className="btn btn-warning"
           >
             Update
@@ -30,17 +30,6 @@ const Item = ({ item }) => {
         </div>
       </div>
     </div>
-
-    // <div className="item">
-    //   <img className="w-100" src={img} alt="" />
-    //   <h2>{name}</h2>
-    //   <p>Price: {price}</p>
-    //   <p>
-    //     <small>{description}</small>
-    //   </p>
-    //   <Button className="btn btn-warning">Make Appointment: {name}</Button>
-    //   {/* <button onClick={() => navigateToServiceDetail(id)} className='btn btn-primary'>Book: {name}</button> */}
-    // </div>
   );
 };
 

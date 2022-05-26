@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/Home/Home";
 import Header from "./Pages/Shared/Header/Header";
 import Footer from "./Pages/Shared/Footer/Footer";
-import ManageInventory from "./Pages/ManageInventory/ManageInventory";
+// import ManageInventory from "./Pages/ManageInventory/ManageInventory";
 import RequireAuth from "./Pages/Login/Required Auth/RequiredAuth";
 import NotFound from "./Pages/Shared/Not Found/NotFound";
 import AboutUs from "./Pages/About Us/AboutUs";
@@ -13,6 +13,7 @@ import Blogs from "./Pages/Blog/Blog";
 import Additem from "./Pages/Add item/Additem";
 import Myitem from "./Pages/My items/Myitems";
 import Manageitem from "./Pages/Manage Item/ManageItem";
+import Inventory from "./Pages/Inventory/Inventory";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
           path="/item/:itemId"
           element={
             <RequireAuth>
-              <ManageInventory></ManageInventory>
+              <Inventory></Inventory>
             </RequireAuth>
           }
         ></Route>
@@ -70,14 +71,6 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
-        {/* <Route
-          path="/checkout"
-          element={
-            <RequireAuth>
-              <Checkout></Checkout>
-            </RequireAuth>
-          }
-        ></Route> */}
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

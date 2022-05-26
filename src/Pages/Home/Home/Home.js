@@ -17,11 +17,14 @@ const Home = () => {
       <div>
         <nav>
           <Link to="/manageitem">
-            <Button variant="danger">Manage Inventories</Button>
+            <Button variant="danger" className="btn btn-lg">
+              Manage Inventories
+            </Button>
           </Link>
         </nav>
       </div>
-      <AboutUs></AboutUs>
+      <h5>section 3</h5>
+      <h5>section 4</h5>
     </div>
   );
 };

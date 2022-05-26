@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import useItems from "../hooks/useItems";
 
-const ManageItems = () => {
+const Myitem = () => {
   const [items, setItems] = useItems();
 
   const handleDelete = (id) => {
@@ -27,15 +27,6 @@ const ManageItems = () => {
 
       {items.map((item) => (
         <div key={item._id}>
-          {/* <h5>
-            {item.name}{" "}
-            <button
-              className="btn btn-danger"
-              onClick={() => handleDelete(item._id)}
-            >
-              DELETE
-            </button>
-          </h5> */}
           <table class="table table-striped table-dark">
             <thead class="thead-dark">
               <tr>
@@ -74,4 +65,4 @@ const ManageItems = () => {
   );
 };
 
-export default ManageItems;
+export default Myitem;
