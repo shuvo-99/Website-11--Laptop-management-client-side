@@ -13,14 +13,40 @@ const Inventory = () => {
       .then((data) => setItem(data));
   }, []);
 
+  const handleUpdateUser = (event) => {
+    event.preventDefault();
+
+    const quantity = event.target.quantity.value;
+
+    const updatedUser = { quantity };
+
+    // send data to the server
+    const url = `http://localhost:5000/item/${itemId}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedUser),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("success", data);
+        alert("users added successfully!!!");
+        event.target.reset();
+        // Adding reload button to show updated items on UI
+        window.location.reload(false);
+      });
+  };
+
   function delivered() {
     if (item.quantity > 0) {
       // item.quantity = item.quantity - 1;
       let d = item.quantity - 1;
       item.quantity = d;
       console.log(item.quantity);
-      // return item.quantity;
-      return d;
+      return item.quantity;
+      // return d;
     }
   }
   return (
@@ -53,6 +79,21 @@ const Inventory = () => {
           </tr>
         </tbody>
       </table>
+      <br />
+      <h2>Restock the items</h2>
+      <form onSubmit={handleUpdateUser}>
+        <input
+          className="mb-2"
+          name="quantity"
+          placeholder="Quantity"
+          type="number"
+          // {...register("quantity")}
+        />
+        {/* <br />
+        <input type="email" name="email" placeholder="Email" required /> */}
+        <br />
+        <input type="submit" value="Restocking" />
+      </form>
     </div>
   );
 };
