@@ -1,3 +1,52 @@
+//   // const quantity = parseInt(items.quantity) - 1;
+
+//   // const handleDeliver = () => {
+//   //   // event.preventDefault();
+
+//   //   // const quantity = event.target.quantity.value;
+//   //   // const quantity = -1;
+//   //   // const quantity = parseInt(quantity1) + 1;
+
+//   //   // const updatedUser = { quantity };
+
+//   //   // send data to the server
+//   //   const url = `http://localhost:5000/item/${itemId}`;
+//   //   fetch(url, {
+//   //     method: "PUT",
+//   //     headers: {
+//   //       "content-type": "application/json",
+//   //     },
+//   //     body: JSON.stringify({ quantity }),
+//   //   })
+//   //     .then((res) => res.json())
+//   //     .then((data) => {
+//   //       console.log("success", data);
+//   //       alert("users added successfully!!!");
+
+//   //     });
+//   // };
+
+//   // const handleDeliver = (id) => {
+//   //   const url = `http://localhost:5000/item/${id}`;
+//   //   fetch(url, {
+//   //     method: "DELETE",
+//   //   })
+//   //     .then((res) => res.json())
+//   //     .then((data) => {
+//   //       console.log(data);
+//   //     });
+//   // };
+
+//   // function delivered() {
+//   //   if (items.quantity > 0) {
+//   //     let d = items.quantity - 1;
+//   //     items.quantity = d;
+//   //     console.log(items.quantity);
+//   //     return items.quantity;
+
+//   //   }
+//   // }
+
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
@@ -13,12 +62,12 @@ const Inventory = () => {
       .then((data) => setItem(data));
   }, []);
 
-  const handleUpdateUser = (event) => {
+  const handleRestockItems = (event) => {
     event.preventDefault();
 
     const quantity = event.target.quantity.value;
 
-    const updatedUser = { quantity };
+    const RestockItem = { quantity };
 
     // send data to the server
     const url = `http://localhost:5000/item/${itemId}`;
@@ -27,12 +76,12 @@ const Inventory = () => {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(updatedUser),
+      body: JSON.stringify(RestockItem),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log("success", data);
-        alert("users added successfully!!!");
+        alert("Restock Items successfully!!!");
         event.target.reset();
         // Adding reload button to show updated items on UI
         window.location.reload(false);
@@ -51,7 +100,6 @@ const Inventory = () => {
   }
   return (
     <div>
-      {/* <h2>Manage Inventory: {item.name}</h2> */}
       <h2>Manage Inventory</h2>
       <br />
       <br />
@@ -68,12 +116,12 @@ const Inventory = () => {
         <tbody>
           <tr>
             <td>{item.name}</td>
-            <td>{item.price}</td>
+            <td>Tk. {item.price}</td>
             <td>{item.quantity}</td>
             <td>{item.suppliername}</td>
             <td>
               <button className="btn btn-danger" onClick={delivered}>
-                Delevered
+                Delivered
               </button>
             </td>
           </tr>
@@ -81,7 +129,7 @@ const Inventory = () => {
       </table>
       <br />
       <h2>Restock the items</h2>
-      <form onSubmit={handleUpdateUser}>
+      <form onSubmit={handleRestockItems}>
         <input
           className="mb-2"
           name="quantity"
