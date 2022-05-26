@@ -6,7 +6,7 @@ const Additem = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    const url = `http://localhost:5000/item`;
+    const url = `https://whispering-ravine-75605.herokuapp.com/item`;
     fetch(url, {
       method: "POST",
       headers: {
