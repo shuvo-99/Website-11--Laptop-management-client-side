@@ -6,7 +6,7 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/item")
+    fetch("http://localhost:5000/review")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -14,9 +14,9 @@ const Reviews = () => {
   return (
     <div id="reviews" className="container">
       <div className="row">
-        <h1>Reviews</h1>
+        <h1>Customer Reviews</h1>
         {reviews.map((review) => (
-          <Review key={review._id} item={review}></Review>
+          <Review key={review._id} review={review}></Review>
         ))}
       </div>
     </div>

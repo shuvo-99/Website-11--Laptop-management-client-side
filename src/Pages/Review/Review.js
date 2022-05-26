@@ -2,7 +2,8 @@ import React from "react";
 import "./Review.css";
 
 const Review = ({ review }) => {
-  const { _id, name, image, rating, reviews } = review;
+  console.log(review);
+  const { name, image, rating, reviews } = review;
 
   return (
     <div className="g-1 col-sm-12 col-md-6 col-lg-4">
