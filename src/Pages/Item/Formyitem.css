@@ -1,0 +1,6 @@
+.item {
+  border: 1px solid rgb(222, 211, 211);
+  border-radius: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}

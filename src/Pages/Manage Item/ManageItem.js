@@ -1,4 +1,6 @@
+import { Button } from "bootstrap";
 import React from "react";
+import { Link } from "react-router-dom";
 import useItems from "../hooks/useItems";
 
 const ManageItems = () => {
@@ -63,6 +65,11 @@ const ManageItems = () => {
           </table>
         </div>
       ))}
+      <div>
+        <a href="/additem" className="btn btn-primary btn-lg">
+          Add New Item
+        </a>
+      </div>
     </div>
   );
 };
