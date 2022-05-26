@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import AboutUs from "../../About Us/AboutUs";
 import Banner from "../Banner/Banner";
 import Items from "../Items/Items";
+import Reviews from "../Reviews/Reviews";
 import "./Home.css";
 
 const Home = () => {
@@ -23,8 +24,11 @@ const Home = () => {
           </Link>
         </nav>
       </div>
-      <h5>section 3</h5>
+      <br />
+      <AboutUs></AboutUs>
+
       <h5>section 4</h5>
+      <Reviews></Reviews>
     </div>
   );
 };

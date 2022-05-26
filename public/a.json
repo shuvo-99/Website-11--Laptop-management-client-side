@@ -90,3 +90,28 @@
     "img": "https://i.ibb.co/BNCdM8K/14-3405-5-500x500.jpg"
   }
 ]
+
+
+[
+  {
+    
+    "name": "Ahsana Habib",
+    "review": "'Amazing platform. It easy to work and manage all the datas along with database'",
+    "rating": 5.0,
+    "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+  },
+  {
+    
+    "name": "Jamiul Bari",
+    "review": "'Great service. Easies my task a lot'",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"
+  },
+  {
+    
+    "name": "Shadab Iqbal",
+    "review": "'They have all kinds of neccessary tools. Glad to find them'",
+    "rating": 5.0,
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"
+  }
+]

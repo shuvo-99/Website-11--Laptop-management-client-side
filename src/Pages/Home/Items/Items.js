@@ -21,12 +21,6 @@ const Items = () => {
         ))}
       </div>
     </div>
-
-    // <div className="items-container">
-    //   {items.map((item) => (
-    //     <Item key={item.id} item={item}></Item>
-    //   ))}
-    // </div>
   );
 };
 
