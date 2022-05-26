@@ -26,9 +26,6 @@ const Header = () => {
             <Nav.Link as={Link} to="blogs">
               Blogs
             </Nav.Link>
-            <Nav.Link as={Link} to="about">
-              About Us
-            </Nav.Link>
           </Nav>
           <Nav>
             {user && (
@@ -72,26 +69,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// import React from "react";
-// import { Container, Nav, Navbar } from "react-bootstrap";
-
-// const Header = () => {
-//   return (
-//     <>
-//       <Navbar bg="primary" variant="dark">
-//         <Container>
-//           <Nav className="me-auto">
-//             <Nav.Link href="#home">Home</Nav.Link>
-//             <Nav.Link href="#items">Items</Nav.Link>
-//             <Nav.Link href="#aboutUs">About Us</Nav.Link>
-//             <Nav.Link href="#goals">Goals</Nav.Link>
-//             <Nav.Link>Login</Nav.Link>
-//           </Nav>
-//         </Container>
-//       </Navbar>
-//     </>
-//   );
-// };
-
-// export default Header;

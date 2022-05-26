@@ -1,10 +1,11 @@
 import React from "react";
 import Aboutusimg from "../../images/Aboutusimg.jpg";
+import "./AboutUs.css";
 
 const AboutUs = () => {
   return (
     <div>
-      <h2>About Us </h2>
+      <h1 className="title "> About Us </h1>
       <br />
       <div className="container">
         <div className="row">

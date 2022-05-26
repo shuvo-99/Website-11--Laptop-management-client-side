@@ -26,8 +26,7 @@ const Home = () => {
       </div>
       <br />
       <AboutUs></AboutUs>
-
-      <h5>section 4</h5>
+      <br />
       <Reviews></Reviews>
     </div>
   );
