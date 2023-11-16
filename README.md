@@ -1,7 +1,5 @@
 Website Name: Laptop Management System
 
-Website Link: https://laptop-management-website.web.app/
-
 Short Description: This is a laptop management system. Here, user can add items, delete items and update items. One can see one's list of items and manage it.
 
 Features and functionality:
